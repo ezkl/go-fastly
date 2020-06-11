@@ -105,6 +105,7 @@ func TestClient_CacheSettings(t *testing.T) {
 			Version: tv.Number,
 			Name:    "test-cache-setting",
 			NewName: "new-test-cache-setting",
+			Action:  CacheSettingActionDeliver,
 		})
 	})
 	if err != nil {
@@ -112,6 +113,10 @@ func TestClient_CacheSettings(t *testing.T) {
 	}
 	if updatedCacheSetting.Name != "new-test-cache-setting" {
 		t.Errorf("bad name: %q", updatedCacheSetting.Name)
+	}
+
+	if updatedCacheSetting.Action != CacheSettingActionDeliver {
+		t.Errorf("bad action: %q", updatedCacheSetting.Action)
 	}
 
 	// Delete

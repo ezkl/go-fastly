@@ -16,6 +16,9 @@ const (
 
 	// CacheSettingActionRestart sets the cache to restart the request.
 	CacheSettingActionRestart CacheSettingAction = "restart"
+
+	// CacheSettingActionDeliver sets the cache to save the object and deliver the response
+	CacheSettingActionDeliver CacheSettingAction = "deliver"
 )
 
 // CacheSettingAction is the type of cache action.

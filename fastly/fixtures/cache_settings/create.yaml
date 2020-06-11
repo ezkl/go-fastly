@@ -1,14 +1,13 @@
 ---
 version: 1
-rwmutex: {}
 interactions:
 - request:
-    body: Service=7i6HN3TK9wS159v2gPAZ8A&Version=11&action=cache&name=test-cache-setting&stale_ttl=1500&ttl=1234
+    body: Service=7i6HN3TK9wS159v2gPAZ8A&Version=155&action=cache&name=test-cache-setting&stale_ttl=1500&ttl=1234
     form:
       Service:
       - 7i6HN3TK9wS159v2gPAZ8A
       Version:
-      - "11"
+      - "155"
       action:
       - cache
       name:
@@ -20,27 +19,26 @@ interactions:
     headers:
       Content-Type:
       - application/x-www-form-urlencoded
-      Fastly-Key:
-      - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       User-Agent:
-      - FastlyGo/0.4.3.dev (+github.com/fastly/go-fastly; go1.12)
-    url: https://api.fastly.com/service/7i6HN3TK9wS159v2gPAZ8A/version/11/cache_settings
+      - FastlyGo/1.15.0 (+github.com/fastly/go-fastly; go1.14.4)
+    url: https://api.fastly.com/service/7i6HN3TK9wS159v2gPAZ8A/version/155/cache_settings
     method: POST
   response:
-    body: '{"action":"cache","name":"test-cache-setting","stale_ttl":"1500","ttl":"1234","service_id":"7i6HN3TK9wS159v2gPAZ8A","version":"11","deleted_at":null,"cache_condition":"","created_at":"2019-05-08T18:03:09Z","updated_at":"2019-05-08T18:03:09Z"}'
+    body: '{"action":"cache","name":"test-cache-setting","stale_ttl":"1500","ttl":"1234","service_id":"7i6HN3TK9wS159v2gPAZ8A","version":"155","cache_condition":"","created_at":"2020-06-11T16:13:35Z","updated_at":"2020-06-11T16:13:35Z","deleted_at":null}'
     headers:
       Accept-Ranges:
+      - bytes
       - bytes
       Cache-Control:
       - no-cache
       Content-Type:
       - application/json
       Date:
-      - Wed, 08 May 2019 18:03:09 GMT
+      - Thu, 11 Jun 2020 16:13:35 GMT
       Fastly-Ratelimit-Remaining:
-      - "998"
+      - "9915"
       Fastly-Ratelimit-Reset:
-      - "1557342000"
+      - "1591894800"
       Status:
       - 200 OK
       Strict-Transport-Security:
@@ -55,8 +53,9 @@ interactions:
       X-Cache-Hits:
       - 0, 0
       X-Served-By:
-      - cache-control-slwdc9036-CONTROL-SLWDC, cache-sjc3641-SJC
+      - cache-control-slwdc9036-CONTROL-SLWDC, cache-pao17442-PAO
       X-Timer:
-      - S1557338589.720202,VS0,VE452
+      - S1591892016.609211,VS0,VE280
     status: 200 OK
     code: 200
+    duration: ""
